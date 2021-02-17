@@ -17,7 +17,6 @@ import Levenshtein
 from multiprocessing import Pool, Manager
 import pandas as pd
 
-
 def fargv():
     parser = argparse.ArgumentParser(usage="python pyadapter_trim.FFPE4.py -i reads_R1.fastq.gz")
     parser.add_argument('-i',"--R1",help="the input of fastq ", required=True)
