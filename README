@@ -1,0 +1,10 @@
+Python version: Python 3.7.4
+
+Packages required: Bio.Seq, fuzzywuzzy, Levenshtein, multiprocessing, pandas
+
+Just keep all parameters as default
+
+Usage: python pyadapter_trim.FFPE.py -i R1.fastq.gz
+
+Usage: python pyadapter_trim.FFPE.multiprocessor.py -i R1.fastq.gz -t 5
+
