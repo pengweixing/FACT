@@ -4,7 +4,10 @@ Packages required: Bio.Seq, fuzzywuzzy, Levenshtein, multiprocessing, pandas
 
 Just keep all parameters as default
 
-Usage: python pyadapter_trim.FFPE.py -i R1.fastq.gz
+For single-end data (for R1):
 
-Usage: python pyadapter_trim.FFPE.multiprocessor.py -i R1.fastq.gz -p 5
+	Usage: python adapter_trim.T7.SE.py -i R1.fastq.gz
+	Usage: python adapter_trim.T7.SE.multiprocessor.py -i R1.fastq.gz -p 5
 
+For pair-end data (R1 and R2)
+	Usage: python adapter_trim.T7.PE.py -r1 R1.fastq.gz -r2 R2.fastq.gz
