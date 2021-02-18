@@ -49,7 +49,7 @@ def fuzz_align(reads,adaptor,mismatch):
             if dist <= mismatch:  # find first then break
                 return idx,dist
                 break
-def trim(each_butter,adaptor_list,adaptor_list_rc,args):
+def trim(each_buffer,adaptor_list,adaptor_list_rc,args):
     
     mismatch = args.mismatch
     adaptor = args.adaptor
@@ -63,11 +63,11 @@ def trim(each_butter,adaptor_list,adaptor_list_rc,args):
     qual_header_o = []
     qual_o = []
 
-    for line in each_butter:
+    for line in each_buffer:
         seq_header = line[0]
-        seq = next(each_butter)[0]
-        qual_header = next(each_butter)[0]
-        qual = next(each_butter)[0]
+        seq = next(each_buffer)[0]
+        qual_header = next(each_buffer)[0]
+        qual = next(each_buffer)[0]
         for each_subset in adaptor_list:
             if len(each_subset) >= length_for_complete:
                 if fuzz.partial_ratio(each_subset,seq)>threhold_for_Levenshtein:
@@ -185,8 +185,8 @@ def main(kwargs):
         for num in range(Processor):
             start = num*block*4
             end = (num+1)*block*4
-            each_butter = iter(each_chunk[start:end])
-            results.append(pool.apply_async(trim,(each_butter,adaptor_list,adaptor_list_rc,args)))
+            each_buffer = iter(each_chunk[start:end])
+            results.append(pool.apply_async(trim,(each_buffer,adaptor_list,adaptor_list_rc,args)))
         for each in results:
             for each2 in each.get():
                 r1_write.write(each2[0])
