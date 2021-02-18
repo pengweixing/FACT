@@ -11,4 +11,4 @@ For single-end data (for R1):
 
 For pair-end data (R1 and R2)
 	Usage: python adapter_trim.T7.PE.py -r1 R1.fastq.gz -r2 R2.fastq.gz
-	Usage: python adapter_trim.T7.PE.mutiprocessor.py -r1 R1.fastq.gz -r2 R2.fastq.gz
+	Usage: python adapter_trim.T7.PE.multiprocessor.py -r1 R1.fastq.gz -r2 R2.fastq.gz
