@@ -21,7 +21,7 @@ def fargv():
     parser = argparse.ArgumentParser(usage="python pyadapter_trim.FFPE4.py -i reads_R1.fastq.gz")
     parser.add_argument('-i',"--R1",help="the input of fastq ", required=True)
     parser.add_argument('-m',"--mismatch",help="the number of mismatch",type=int,default=3)
-    parser.add_argument('-t',"--threads",help="the number of processors",type=int,default=4)
+    parser.add_argument('-p',"--processor",help="the number of processors",type=int,default=4)
     parser.add_argument('-len_mid',"--length_for_complete",help="the number of mismatch",type=int,default=15)
     parser.add_argument('-oh',"--expand_for_overhang",help="expand the flank of the reads",type=int,default=0)
     parser.add_argument('-len_min',"--minimal_adaptor",help="the minimal length of the adaptor",type=int,default=15)
