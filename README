@@ -6,5 +6,5 @@ Just keep all parameters as default
 
 Usage: python pyadapter_trim.FFPE.py -i R1.fastq.gz
 
-Usage: python pyadapter_trim.FFPE.multiprocessor.py -i R1.fastq.gz -t 5
+Usage: python pyadapter_trim.FFPE.multiprocessor.py -i R1.fastq.gz -p 5
 
