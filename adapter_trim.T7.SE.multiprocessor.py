@@ -147,7 +147,7 @@ def main(kwargs):
 
     args = kwargs
     fa_input = args.R1
-    processor = args.threads
+    processor = args.processor
     append = fa_input.split('.')[-1]
     mychunksize = 500000
     if append == "fastq":
